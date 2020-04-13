@@ -18,4 +18,9 @@ public class DataServerAccsess implements AssignmentServer{
     DB.add(new Assignment(id, assignment.getAssignment()));
     return 1;
   }
+  //Retreving all assignments from the DB
+  @Override
+  public List<Assignment> SelectAllAssignments() {
+    return DB;
+  }
 }
