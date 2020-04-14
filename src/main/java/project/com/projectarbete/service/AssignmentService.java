@@ -7,6 +7,8 @@ import project.com.projectarbete.dataserver.AssignmentServer;
 import project.com.projectarbete.list.Assignment;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 // could have used @Component instead of @Service. But I read that it is better to be more specific when you use annotations
 @Service
@@ -28,5 +30,13 @@ public class AssignmentService {
   //Retrieving the list from DB
   public List<Assignment> getAllAssignments(){
     return assignmentServer.SelectAllAssignments();
+  }
+
+  public Optional<Assignment> getAssignmentById(UUID id){
+    return assignmentServer.selectAllById(id);
+  }
+
+  public int deleteAssignment(UUID id){
+    return assignmentServer.deleteAssignment(id);
   }
 }
