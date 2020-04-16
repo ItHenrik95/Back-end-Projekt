@@ -24,7 +24,7 @@ public class DataServerAccsess implements AssignmentServer{
   public List<Assignment> SelectAllAssignments() {
     return DB;
   }
-  // Filters threw the assignments and returns the first id it gets.
+  // Filters threw the assignment and returns the first id it gets.
   @Override
   public Optional<Assignment> selectAllById(UUID id) {
     return DB.stream()

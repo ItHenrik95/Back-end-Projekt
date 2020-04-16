@@ -18,15 +18,15 @@ public class AssignmentService {
  private final AssignmentServer assignmentServer;
 
   @Autowired
-  //Qualifier is used to quickly change between servers by only changing the interface. Might need to fix(delete) this later but it is here for now so that I know that my HTTP requests works
-  public AssignmentService(@Qualifier("dataServer") AssignmentServer assignmentServer) {
+  //Qualifier is used to quickly change between DB by only changing the class.
+  public AssignmentService(@Qualifier("MySql") AssignmentServer assignmentServer) {
     this.assignmentServer = assignmentServer;
   }
    // adding an assignment to the list using a constructor
   public int addAssignment(Assignment assignment){
-
     return assignmentServer.insertAssignment(assignment);
   }
+
   //Retrieving the list from DB
   public List<Assignment> getAllAssignments(){
     return assignmentServer.SelectAllAssignments();
@@ -35,7 +35,7 @@ public class AssignmentService {
   public Optional<Assignment> getAssignmentById(UUID id){
     return assignmentServer.selectAllById(id);
   }
-
+    //Method to delete an assignemnt
   public int deleteAssignment(UUID id){
     return assignmentServer.deleteAssignment(id);
   }
