@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 // could have used @Component instead of @Repository. But I read that it is better to be more specific when you use annotations
-@Repository("dataServer")
+/*@Repository("dataServer")
 public class DataServerAccsess implements AssignmentServer{
   //creating a list that we can store the assignments in!
   private static List<Assignment> DB = new ArrayList<>();
@@ -42,4 +42,4 @@ public class DataServerAccsess implements AssignmentServer{
     return 1;
   }
 
-}
+}*/

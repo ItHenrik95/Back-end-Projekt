@@ -8,12 +8,12 @@ import java.util.UUID;
 
 
 public class Assignment {
-  private UUID id;
+  private int id;
   private String assignment;
 
   //constructor
   // i am using @JsonProperty to make Postman understand what an Assignment is. (Contverting the text from postman to a java class)
-  public Assignment(@JsonProperty("id") UUID id,
+  public Assignment(@JsonProperty("id") int id,
                     @JsonProperty("assignment") String assignment) {
     this.id = id;
     this.assignment = assignment;
@@ -21,7 +21,7 @@ public class Assignment {
   public Assignment(){
 
   }
-  public void setId(UUID id){
+  public void setId(int id){
     this.id = id;
   }
   public void setAssignment(String assignment){
@@ -33,7 +33,7 @@ public class Assignment {
     return assignment;
   }
 
-  public UUID getId() {
+  public int getId() {
     return id;
   }
 }
