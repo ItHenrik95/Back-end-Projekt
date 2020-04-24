@@ -9,3 +9,5 @@ Det har blivit lite avikelse ifrån mitt ER-diagram som jag skickade in i förra
 med 2 attributer(assignment och id) där id är primary key. Det jag inte har fått med är ett inlogg där användaren skulle logga in med
 namn och lösenord. Anledningen till avikelsen är att jag inte riktigt fick det att fungera och känns konstigt att skicka in en applikation 
 som inte fungerar.
+
+Använder mig av auto incretment i min databas för att plusa på 1 på varje id. Tyckte det var en smidig lösning. 
