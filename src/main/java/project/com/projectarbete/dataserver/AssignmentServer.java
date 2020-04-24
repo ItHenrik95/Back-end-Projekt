@@ -10,14 +10,12 @@ public interface AssignmentServer {
   int insertAssignment(int id, Assignment assignment);
 
   default int insertAssignment(Assignment assignment){
-    // create a random id
     int id = 0;
     return insertAssignment(id,assignment);
   }
 
   List<Assignment> SelectAllAssignments();
 
-  // Optional is to be able to use stream method.
   public Assignment selectAssignmentById(int id);
 
     // method for deleting an assignment by the ID.
