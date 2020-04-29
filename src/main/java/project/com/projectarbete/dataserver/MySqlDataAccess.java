@@ -8,7 +8,6 @@ import project.com.projectarbete.list.Assignment;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.UUID;
 
 @Repository("MySql")
 @Configuration
@@ -35,7 +34,7 @@ public class MySqlDataAccess implements AssignmentServer {
     //VALUES (value1, value2, value3,...)
     final String sql = "INSERT INTO assignments(id,assignment)VALUES (?,?)";
     final String task = assignment.getAssignment();
-    
+
     jdbcTemplate.update(sql, new Object[] {id,task});
     return 1;
   }

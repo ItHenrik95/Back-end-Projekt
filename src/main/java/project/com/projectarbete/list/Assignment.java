@@ -4,9 +4,6 @@ package project.com.projectarbete.list;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-import java.util.UUID;
-
-
 public class Assignment {
   private int id;
   private String assignment;
